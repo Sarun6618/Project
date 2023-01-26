@@ -1,0 +1,208 @@
+<html>
+	<head>
+        <title>Desktop Portal</title>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+	</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+		<a class="navbar-brand text-light nav-link" href="/">HOME</a>
+		<a class="navbar-brand text-light nav-link" href="search.ejs">Search</a>
+			<!--<a class="navbar-brand" href="#">
+				<img src="./assets/img/20180826_174255.jpg" alt="" width="75" height="75" class="d-inline-block align-text-top">
+			  </a>
+			<ul>
+				<li></li>
+				<li></li>
+				<li><a class="nav-link scrollto" href="#about">About</a></li>
+				<li><a class="nav-link scrollto" href="#Education">Education</a></li>
+				<li><a class="nav-link scrollto " href="#Projects">Projects</a></li>
+				<li><a class="nav-link scrollto " href="#Contact">Contact</a></li>
+				<li class="dropdown"><a href="#"><span>ITEMS</span> <i class="bi bi-chevron-down"></i></a>
+				  <ul>
+					<li><a href="desktop.ejs">Desktop</a></li>
+					<li><a href="Laptop.ejs">Laptop</a></li>
+					<li><a href="Tab.ejs">Tab/iPad/Mobile</a></li>
+					<li><a href="Mouse.ejs">Mouse</a></li>
+					<li><a href="Keyboard.ejs">Keyboard</a></li>
+					<li><a href="Monitor.ejs">Monitor</a></li>
+					<li><a href="Printer.ejs">Printer</a></li>
+				  </ul>
+				  <!--<ul>
+					<li><a href="#">Drop Down 1</a></li>
+					<li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
+
+					</li>
+					<li><a href="#">Drop Down 2</a></li>
+					<li><a href="#">Drop Down 3</a></li>
+					<li><a href="#">Drop Down 4</a></li>
+				  </ul>
+				</li>
+			<ul>-->
+	</nav>
+<h1 style="text-align: center"> DESKTOP AUDIT </h1>
+<form action="/Desktop/register" method="POST">
+	<table border=1 width="50%" height="600px" align="center" bgcolor="DodgerBlue">
+	 <tr>
+		<h1> <%= status %> </h1>
+	  <td>
+ 	   <label for="Make">Make:</label>
+	  </td>
+	  <td>
+  	   <select name="Make" id="Make">
+         <option value="Dell">Dell</option>
+         <option value="Lenovo">Lenovo</option>
+         <option value="Assembled">Assembled</option>
+         <option value="HP">HP</option>
+         </select>
+	   <br>
+	  </td>
+	 </tr>
+	 <tr>
+		<td>
+		 <label for="City">City:</label>
+		</td>
+		<td>
+		 <input type="text" id="City" name="City"> <br>
+		</td>
+	   </tr>
+	 <tr>
+	  <td>
+	   <label for="Hostname">Hostname: </label>
+	  </td>
+	  <td>
+	   <input type="text" id="Hostname" name="Hostname"> <br>
+	  </td>
+	 </tr>
+	 <tr>
+	  <td>
+	   <label for="model">Model:</label>
+	  </td>
+	  <td>
+	   <input type="text" id="model" name="model"> <br>
+	  </td>
+	 </tr>
+	 <tr>
+	  <td>
+	   <label for="TagID">Tag ID:</label>
+	  </td>
+	  <td>
+	   <input type="text" id="TagID" name="TagID"> <br>
+	  </td>
+	 </tr>
+	 <tr>
+	  <td>
+	   <label for="SerialNumber">Serial Number:</label>
+	  </td>
+	  <td>
+	   <input type="text" id="SerialNumber" name="SerialNumber"> <br>
+	  </td>
+	 </tr>
+	 <tr>
+	  <td>
+	   <label for="Processor">Processor:</label><br>
+	  </td>
+	  <td>
+	   <input type="radio" name="Processor" id="Processor" value="Core i3">Core i3<br>
+	   <input type="radio" name="Processor" id="Processor" value="Core i5">Core i5<br>
+	   <input type="radio" name="Processor" id="Processor" value="Core i7">Core i7<br>
+	   <input type="radio" name="Processor" id="Processor" value="Core i9">Core i9<br>
+	   <input type="radio" name="Processor" id="Processor" value="Dual Core">Dual Core<br>
+	   <input type="radio" name="Processor" id="Processor" value="AMD Ryzen">AMD Ryzen<br>
+	   <input type="radio" name="Processor" id="Processor" value="Other">Other<br>
+	  </td>
+	 </tr>
+	 <tr>
+	  <td>
+	   <label for="Generation">Generation:</label>
+	  </td>
+	  <td>
+	   <input type="text" id="Generation"> <br>
+	  </td>
+	 </tr>
+	 <tr>
+	  <td>
+	   <label for="os">Operating System:</label><br>
+	  </td>
+	  <td>
+	   <input type="radio" name="os" value="Windows">Windows<br>
+	   <input type="radio" name="os" value="Ubuntu">Ubuntu<br>
+	   <input type="radio" name="os" value="MacOS">MacOS<br>
+	  </td>
+	 </tr>
+	 <tr>
+	  <td>
+	   <label for="RAM">RAM:</label><br>
+	  </td>
+	  <td>
+	   <input type="radio" id="RAM" name="RAM" value="2GB">2GB<br>
+	   <input type="radio" id="RAM" name="RAM" value="4GB">4GB<br>
+	   <input type="radio" id="RAM" name="RAM" value="8GB">8GB<br>
+	   <input type="radio" id="RAM" name="RAM" value="16GB">16GB<br>
+	   <input type="radio" id="RAM" name="RAM" value="32GB">32GB<br>
+	   <input type="radio" id="RAM" name="RAM" value="64GB">64GB<br>
+	  </td>
+	 </tr>
+	 <tr>
+	  <td>
+	   <label for="Storage">Storage:</label><br>
+	  </td>
+	  <td>
+	   <input type="radio" id="Storage" name="Storage" value="500 GB HDD">500 GB HDD<br>
+	   <input type="radio" id="Storage" name="Storage" value="1 TB HDD">1 TB HDD<br>
+	   <input type="radio" id="Storage" name="Storage" value="256 GB SSD">256 GB SSD<br>
+	   <input type="radio" id="Storage" name="Storage" value="512 GB SSD">512 GB SSD<br>
+	   <input type="radio" id="Storage" name="Storage" value="1 TB SSD">1 TB SSD<br>
+	   <input type="radio" id="Storage" name="Storage" value="Other">Other<br>
+	  </td>
+	 </tr>
+	 <tr>
+	  <td>
+	   <label for="Graphics">Graphics:</label><br>
+	  </td>
+	  <td>
+	   <input type="radio" id="Graphics" name="Graphics" value="4GB">4GB<br>
+	   <input type="radio" id="Graphics" name="Graphics" value="2GB">2GB<br>
+	   <input type="radio" id="Graphics" name="Graphics" value="NA">NA<br>
+	   <input type="radio" id="Graphics" name="Graphics" value="NA">NA<br>
+	  </td>
+	 </tr>
+	 <tr>
+	  <td>
+	   <label for="User">User:</label>
+	  </td>
+	  <td>
+	   <input type="text" id="User" name="User"> <br><br>
+	  </td>
+	 </tr>
+	 <tr>
+	  <td>
+	   <label for="Status">Status:</label><br>
+	  </td>
+	  <td>
+	   <input type="radio" id="Status" name="Status" value="Working">Working<br>
+	   <input type="radio" id="Status" name="Status" value="Not Working">Not Working<br><br>
+	  </td>
+	 </tr>
+	 <tr>
+	  <td>
+	   <label for="Remarks">Remarks:</label>
+	  </td>
+	  <td>
+	   <input type="text" id="Remarks" name="Remarks"> <br><br>
+	  </td>
+	 </tr>
+	 <tr>
+	  <td>
+	   <input type="submit" value="Submit" onclick="msg()">
+	  </td>
+	 </tr>
+	<table>
+</form>
+<script>
+function msg(){
+alert("Your response is submitted");
+}
+</script>
+</body>
+</html>
