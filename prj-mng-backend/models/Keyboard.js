@@ -1,10 +1,22 @@
 const mongoose=require('mongoose');
 const Schema=mongoose.Schema;
 const KeyboardSchema=new Schema({
-    Make:String,
-    City:String,
-    Model:String,
-    TagID:String,
+    Make:{
+        type:String,
+        required:true
+    },
+    City:{
+        type:String,
+        required:true
+    },
+    Model:{
+        type:String,
+        required:true
+    },
+    TagID:{
+        type:String,
+        required:true
+    },
     SerialNumber:{
         type:String,
         required:true,
@@ -15,8 +27,15 @@ const KeyboardSchema=new Schema({
         required:true,
         unique:true
     },
-    Status:String,
-    Remarks:String
+    Status:{
+        type:String,
+        required:true
+    },
+    Remarks:{
+        type:String,
+        required:true
+    },
+    Updatedby:String
 })
 const Keyboard=mongoose.model('Keyboard',KeyboardSchema);
 module.exports=Keyboard
